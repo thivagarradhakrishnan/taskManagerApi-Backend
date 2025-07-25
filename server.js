@@ -11,7 +11,8 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://task-manager-api-frontend.vercel.app/login'],
+  origin: ['https://task-manager-api-frontend.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 
